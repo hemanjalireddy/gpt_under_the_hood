@@ -10,6 +10,25 @@ The goal is to go beyond using pre-trained language models and develop a deeper 
 
 I'll be building, experimenting, and documenting what I learn along the way.
 
+## Dataset: The Office
+
+Instead of Tiny Shakespeare, I'm using dialogue from *The Office (US)*, focusing on conversations featuring Michael Scott from Seasons 1–5.
+
+I wrote a Python preprocessing script (`scripts/prepare_data.py`) that:
+- Extracts scenes featuring Michael Scott while preserving dialogue from other characters.
+- Cleans and formats conversations in a Tiny Shakespeare-style structure.
+- Generates `data/input.txt` for character-level language modeling.
+
+The goal is to explore whether a small GPT trained from scratch can learn conversational patterns and generate sitcom-style dialogue.
+
+### Run Preprocessing
+
+```bash
+python scripts/prepare_data.py
+```
+
+*The transcript dataset and generated training text are kept out of the public repository.*
+
 ## What I'm Exploring
 
 - **Tokenization:** How raw text is converted into tokens that a model can process.
